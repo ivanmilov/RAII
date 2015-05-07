@@ -11,7 +11,7 @@ http://habrahabr.ru/company/pt/blog/255487/
 
 Теперь к делу. Как мы видим, метод Cleanup, являющийся краеугольным камнем нашего класса, оставлен без определения. В результате попытка создания объекта класса неминуемо приведёт к ошибке. Трюк заключается в том, что мы должны определить явную специализацию метода Сleanup для каждого ресурса, которым хотим управлять. Например:
 
-```c
+```
 // Here "FileId" is some OS-specific file descriptor type
 // which must be closed with CloseFile function.
 using File = Resource<struct FileIdTag, FileId>;
