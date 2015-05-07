@@ -19,7 +19,7 @@ template<> void File::Cleanup() noexcept {
   if (resource_)
     CloseFile(resource_);
 }
-
+```
 Теперь мы можем использовать наш класс для управления объектами FileId:
 
 {
